@@ -47,6 +47,11 @@ For data preparations, you can choose the configuration as follows:
 - '**prody**'. \[True, False\]: "True" means using the ProDy software to simulate the unbound protein conformation changes, otherwise Gaussian noise will be used to represent the flexibility.
 - '**data_frac**'. You can set a number between 0 and 1 to handle a portion of the DIPS dataset (as it is relatively large).
 
+You can preprocess the raw data as follows for DB5.5:
+```
+python preprocess_raw_data.py -dataset db55 -graph_cutoff 20 -graph_max_neighbor 10 -pocket_cutoff 8 -prody True
+```
+
 ### How to Run and Reproduce the 96 Datasets?
 
 Firstly, specifiy the path of CHEMBL database and the directory to save the data in the configuration
