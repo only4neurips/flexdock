@@ -21,7 +21,7 @@ joblib==1.1.0
 prody==2.4.0
 ```   
 For convenience, you can follow 2 steps:
-1. run ```conda env create -f env.yaml```
+1. Run ```conda env create -f env.yaml```
 2. Download the following whl files to `./file/`: [torch-scatter](https://data.pyg.org/whl/torch-1.11.0%2Bcu102/torch_scatter-2.0.9-cp39-cp39-linux_x86_64.whl), [torch-sparse](https://data.pyg.org/whl/torch-1.11.0%2Bcu102/torch_sparse-0.6.13-cp39-cp39-linux_x86_64.whl), [torch-cluster](https://data.pyg.org/whl/torch-1.11.0%2Bcu102/torch_cluster-1.6.0-cp39-cp39-linux_x86_64.whl), [torch-spline-conv](https://data.pyg.org/whl/torch-1.11.0%2Bcu102/torch_spline_conv-1.2.1-cp39-cp39-linux_x86_64.whl).
 
 ```
@@ -35,27 +35,15 @@ pip install torch-geometric
 
 ## Dataset Curation
 
-First, you need to generate the required DrugOOD dataset with our code. The dataset curator currently focusing on  generating datasets from CHEMBL. It supports the following two tasks:
+First, you need to generate the required graph structured data for complex with our code. The curator includes two datasets:
 
-- Ligand Based Affinity Prediction (LBAP).
-- Structure Based Affinity Prediction (SBAP).
+- Docking Benchmark 5.5 (DB5.5).
+- Database of Interacting Protein Structures (DIPS).
 
-For OOD domain annotations, it supports the following 5 choices.
-
-- Assay.
-- Scaffold.
-- Size.
-- Protein. (only for SBAP task)
-- Protein Family. (only for SBAP task)
-
-For noise annotations, it supports the following three noise levels. Datasets with different
-noises are implemented by filters with different levels of strictness.
-
-- Core.
-- Refined.
-- General.
-
-At the same time, due to the inconvenient conversion between different measurement type (E.g. IC50, EC50, Ki, Potency),   one needs to specify the measurement type when generating the dataset.
+For data preparations, you can choose the configuration as follows:
+- dataset
+- graph_cutoff
+- pocket_cutoff
 
 ### How to Run and Reproduce the 96 Datasets?
 
