@@ -1,7 +1,7 @@
 # Towards Stable Representations for Flexible Protein-Protein Docking
 
 
-This is the implementation of the paper submitted to NeurIPS 2023 
+This is the implementation of the paper **FlexDock** submitted to NeurIPS 2023 
 
 
 ## Dependencies
