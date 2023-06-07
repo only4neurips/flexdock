@@ -41,9 +41,11 @@ First, you need to generate the required graph structured data for complex with 
 - Database of Interacting Protein Structures (DIPS).
 
 For data preparations, you can choose the configuration as follows:
-- dataset
-- graph_cutoff
-- pocket_cutoff
+- 'dataset'.\["dips","db55"\]
+- 'graph_cutoff'. If the physical distance between two residues in a protein is less than this value, they will be assigned an edge in the KNN graph.
+- 'pocket_cutoff'. If the physical distance between inter-protein residues is less than this value, they will be considered in the pocket.
+- 'prody'. \[True, False\]: "True" means using the ProDy software to simulate the unbound protein conformation changes, otherwise Gaussian noise will be used to represent the flexibility.
+- 'data_frac'. You can set a number between 0 and 1 to handle a portion of the DIPS dataset (as it is relatively large).
 
 ### How to Run and Reproduce the 96 Datasets?
 
