@@ -68,3 +68,4 @@ python -m src.train -data dips -tune False
 ```
 python -m src.train -data db55 -tune True
 ```
+After the two commands finish running, the test results will appear automatically.
