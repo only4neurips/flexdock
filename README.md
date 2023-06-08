@@ -41,7 +41,7 @@ First, you need to generate the required graph structured data for complex with 
 - Database of Interacting Protein Structures (DIPS).
 
 For data preparations, you can choose the configuration as follows:
-- '**dataset**'. \["dips","db55"\]: Datasets will be processed separately, so please choose one.
+- '**data**'. \["dips","db5"\]: Datasets will be processed separately, so please choose one.
 - '**graph_cutoff**'. If the physical distance between two residues in a protein is less than this value, they will be assigned an edge in the KNN graph.
 - '**graph_max_neighbor**'. It means
 - '**pocket_cutoff**'. If the physical distance between inter-protein residues is less than this value, they will be considered in the pocket.
@@ -50,7 +50,7 @@ For data preparations, you can choose the configuration as follows:
 
 You can preprocess the raw data as follows for DB5.5:
 ```
-python src.preprocess_raw_data.py -dataset db55 -graph_cutoff 20 -graph_max_neighbor 10 -pocket_cutoff 8 -prody True
+python src.preprocess_raw_data.py -data db5 -graph_cutoff 20 -graph_max_neighbor 10 -pocket_cutoff 8 -prody True
 ```
 
 ## How to run
