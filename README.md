@@ -50,7 +50,12 @@ For data preparations, you can choose the configuration as follows:
 
 You can preprocess the raw data as follows for DB5.5:
 ```
-python preprocess_raw_data.py -dataset db55 -graph_cutoff 20 -graph_max_neighbor 10 -pocket_cutoff 8 -prody True
+python src.preprocess_raw_data.py -dataset db55 -graph_cutoff 20 -graph_max_neighbor 10 -pocket_cutoff 8 -prody True
 ```
 
 ## How to run
+
+By setting the 'toy' parameter to True, you can successfully train a toy example. This means that the FlexDock model will be validated and tested on DB5.5 without pretraining on DIPS.
+```
+python -m src.train -toy True -h_dim True 32 -atten_head 8 -SEGCN_layer 3 -dropout 0.2 --gamma 0.2 
+```
