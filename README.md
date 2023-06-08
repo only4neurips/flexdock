@@ -55,6 +55,8 @@ python src.preprocess_raw_data.py -dataset db55 -graph_cutoff 20 -graph_max_neig
 
 ## How to run
 
+You can find a detailed explanation of the parameters in ```./src/utils/args.py```.
+
 By setting the 'toy' parameter to True, you can successfully train a toy example. This means that the FlexDock model will be validated and tested on DB5.5 without pretraining on DIPS.
 ```
 python -m src.train -toy True -h_dim True 32 -atten_head 8 -SEGCN_layer 3 -dropout 0.2 --gamma 0.2 
