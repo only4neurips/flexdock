@@ -59,13 +59,13 @@ You can find a detailed explanation of the parameters in ```./src/utils/args.py`
 
 By setting the 'toy' parameter to True, you can successfully train a toy example. This means that the FlexDock model will be validated and tested on DB5.5 without pretraining on DIPS.
 ```
-python -m src.train -toy True -tune False -h_dim True 32 -atten_head 8 -SEGCN_layer 3 -dropout 0.2 --gamma 0.2 
+python /src/train.py -toy -h_dim True 32 -atten_head 8 -SEGCN_layer 3 -dropout 0.2 --gamma 0.2 
 ```
 To reproduce the results in the paper, you can run the following in sequence.
 ```
-python -m src.train -data dips -tune False
+python /src/train.py -data dips 
 ```
 ```
-python -m src.train -data db55 -tune True
+python /src/train -data db55 -tune
 ```
 After the two commands finish running, the test results will appear automatically.
